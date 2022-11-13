@@ -1,0 +1,49 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+struct node
+{
+  int data;
+  node *next;
+};
+class LinkedList
+{
+public:
+  node *head;
+  LinkedList()
+  {
+    head = NULL;
+  }
+  node *prtl(node *head)
+  {
+    node *temp = head;
+    while (temp != NULL)
+    {
+      cout << temp->data << "\t";
+      temp = temp->next;
+    }
+    return head;
+  }
+};
+int main()
+{
+  LinkedList MyList;
+  node *one = new node;
+  node *two = new node;
+  node *three = new node;
+  node *four = new node;
+  node *five = new node;
+  node *head=one;
+  one->data = 5;
+  one->next = two;
+  two->data = 7;
+  two->next = three;
+  three->data = 16;
+  three->next = four;
+  four->data = 70;
+  four->next = five;
+  five->data = 100;
+  five->next = NULL;
+  MyList.head = MyList.prtl(one);
+  return 0;
+}

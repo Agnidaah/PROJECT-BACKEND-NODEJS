@@ -1,0 +1,8 @@
+s=set();print(type(s))
+a=set([1,2,3,4,5]);print(a)
+s.add(1);print(s);s.add(1);print(s)#so set only appends unique values
+b=[2,7,9,0,3];k=set(b)
+print(k,b)#k should be used cuz b can create problem at several instances
+print(s.union(k));e=k.intersection(a);print(e,len(e),max(k),min(e))
+print(k.isdisjoint({12,78,66}))
+b.remove(7);print(b)

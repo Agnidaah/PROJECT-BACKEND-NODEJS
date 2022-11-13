@@ -1,0 +1,7 @@
+a=[["f22",10],["su57",9],["mig35",6],["su47",8]]
+z=dict(a)
+for b,c in a:
+    print(b,"have rating ",c,end="\t")
+
+for b in z:
+    print("\n",b)

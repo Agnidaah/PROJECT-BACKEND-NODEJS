@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+struct node{
+int data;node * left;node *right;
+};
+class binary{public:node * head;
+binary(){head=NULL;}
+node * makenode(int inr){
+node * first=new node;first->data=inr;if(head==NULL){head=first;}
+first->left=NULL;
+first->right=NULL;
+return first;}
+void inorde(node * ptr){if(ptr->left!=NULL){inorde(ptr->left);}
+cout<<ptr->data<<"\t";
+if(ptr->right!=NULL){inorde(ptr->right);}
+}
+void inorder(int get,node * ptr){
+if(get==ptr->data){cout<<"Element already present";}
+else{
+    if(get>ptr->data && ptr->right!=NULL){
+        inorder(get,ptr->right);}else if(get<ptr->data && ptr->left!=NULL){inorder(get,ptr->left);}
+        else{if(get<ptr->data){node * p=makenode(get);ptr->left=p;}else{node * p=makenode(get);ptr->right=p;}}}
+}
+};
+int main(){binary tree;
+node * one=tree.makenode(10);
+node * two=tree.makenode(5);
+node * three=tree.makenode(15);
+node * four=tree.makenode(12);
+node * five=tree.makenode(17);
+node * six=tree.makenode(3);
+node * seven=tree.makenode(7);
+one->left=two;
+one->right=three;
+three->left=four;
+three->right=five;
+two->left=six;
+two->right=seven;
+cout<<"Enter element:";int dat;cin>>dat;
+tree.inorder(dat,tree.head);
+tree.inorde(tree.head);
+}

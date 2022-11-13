@@ -1,0 +1,8 @@
+import random
+a=random.randint(0,5)
+print(a)
+b=random.random()*100
+print(b)   
+c=["mi mix 2","mi 11 lite","mi 10","mi 11 ulrta"]   
+d=random.choice(c)
+print(d)

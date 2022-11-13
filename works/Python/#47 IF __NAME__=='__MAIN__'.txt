@@ -1,0 +1,3 @@
+import x
+print("and the name is main",__name__)
+print(x.add(50,20))

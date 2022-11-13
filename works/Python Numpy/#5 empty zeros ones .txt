@@ -1,0 +1,5 @@
+import numpy as np
+a=np.empty([10,20],dtype=float)
+b=np.zeros([10,20],dtype=np.int8)
+c=np.ones([10,20],dtype=np.int8)
+print(a,b,c)

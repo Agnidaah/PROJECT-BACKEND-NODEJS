@@ -1,0 +1,16 @@
+class a:
+    z='i am class variable z in class a!'
+    def __init__(self):
+        self.y='i am inside class a constructor'
+        self.z='instance variable z in class a'
+        self.special='special in a'
+class b(a):
+    y='i am class variable y in class b'
+    z='i am class variable z in class b'
+    def __init__(self):
+        super().__init__()
+        self.y='i am inside class b constructor'
+        self.z='instance variable z in class b'
+c=a();d=b()
+print(d.z)
+print(d.special,"\n",d.y,"\n",d.z)

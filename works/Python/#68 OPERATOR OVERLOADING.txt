@@ -1,0 +1,20 @@
+class a:
+    leaves=9
+    def __init__(self,name,salary,role):
+        self.name=name;self.salary=salary;self.role=role
+    def details(self):
+        return f"the name is {self.name} having salary {self.salary} for role {self.role}"
+    @classmethod
+    def cleave(cls,nleave):
+        cls.leaves=nleave
+    def __add__(self,other):
+        return self.salary+other.salary
+    def __truediv__(self,other):
+        return self.salary+other.salary
+    def __repr__(self):
+        return f"the name is ('{self.name},{self.salary},{self.role}')"
+b=a('harry',56000,'programmer')
+c=a('rohan',42000,'cleaner')
+print(c)
+print(b+c)
+print(b/c)

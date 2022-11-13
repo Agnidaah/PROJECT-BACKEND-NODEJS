@@ -1,0 +1,4 @@
+a=6640
+b=56
+def printjoke(str):
+     print(f"the given function is used as a {str}")

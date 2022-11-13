@@ -1,0 +1,14 @@
+.statistics table{
+    margin:0 auto;
+}
+.statistics li{
+    font-size:1.2vw;
+}
+.statistics td{
+    padding:2vw;
+    font-size:2vw;
+    font-weight:bold;
+}
+body {
+    background-color:rgb(152, 143, 165);
+  }

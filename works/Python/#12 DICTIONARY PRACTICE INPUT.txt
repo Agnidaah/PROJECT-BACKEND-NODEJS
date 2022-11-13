@@ -1,0 +1,4 @@
+#make a dictionary of five words,take an input from user and give its meaning
+di={"explore":"find","opponent":"rival","great":"REVOLUTIONARY","python":"ajgar","compete":"struggle for win"}
+print("Enter a word from:explore,opponent,great,python,compete",end=":");a=input()
+print(":",di[a])

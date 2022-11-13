@@ -1,0 +1,19 @@
+a=8;b=9;c=sum((a,b));print(c)#built in
+def d():
+    print("Hello you are in UDF!(d)")
+    z=int(input("Enter your age:"))
+    print("vote dalo!") if (z>=18) else print("vote mt dalna!")
+d()
+def e(z,a):
+    print("2 to the power of 8 is :",k:=2**a)
+e(2,a)
+l=int(input("Enter 1st number:"));f=int(input("Enter 2nd number:"))
+def ave(l,f):
+    """This is a function which will calculate average of two numbers
+    and this is docstring"""
+    g=(l+f)/2;return g
+v=ave(l,f)
+print("Average :",v)
+v=ave(25,125)
+print("Average :",v)
+print(ave.__doc__)

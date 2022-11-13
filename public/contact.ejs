@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/middle.css">
+    <style>
+        .outer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2%;
+        }
+
+        .inner {
+            border: none;
+            border-radius: 20%;
+            height: 30vw;
+            width: 80%;
+            background-color: lightgray;
+            text-align: center;
+        }
+
+        .info {
+            padding-top: 1vw;
+            font-size: 3vw;
+        }
+
+        .info img {
+            height: 15vw;
+            border-radius: 20%;
+            cursor: pointer;
+        }
+
+
+        svg {
+            padding-right: 2.5vw;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        svg:hover {
+            color: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <%-include('views/header1');%>
+    <div class="outer">
+        <div class="inner">
+            <div class="info">
+                <h2>Feel free to contact me!</h2>
+                <img src="images/mypic.jpg">
+                <div class="im">
+                    <a href="https://www.facebook.com/profile.php?id=100012880601495" title="Follow me on Facebook">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                            height="4vw" width="3.5vw" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gurpreet-singh-5b4203229/" title="Follow me on LinkedIn">
+                        <svg stroke="currentColor" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            stroke-width="0" viewBox="0 0 30 30" width="4vw" height="4vw">
+                            <path
+                                d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M10.496,8.403 c0.842,0,1.403,0.561,1.403,1.309c0,0.748-0.561,1.309-1.496,1.309C9.561,11.022,9,10.46,9,9.712C9,8.964,9.561,8.403,10.496,8.403z M12,20H9v-8h3V20z M22,20h-2.824v-4.372c0-1.209-0.753-1.488-1.035-1.488s-1.224,0.186-1.224,1.488c0,0.186,0,4.372,0,4.372H14v-8 h2.918v1.116C17.294,12.465,18.047,12,19.459,12C20.871,12,22,13.116,22,15.628V20z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCgiYeHu9n-huq9uzqxpHccg/featured" title="Subscribe me for more information">
+                        <svg stroke="currentColor" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                            stoke-width="0" viewBox="0 0 50 50" width="4vw" height="4vw">
+                            <path
+                                d="M 44.898438 14.5 C 44.5 12.300781 42.601563 10.699219 40.398438 10.199219 C 37.101563 9.5 31 9 24.398438 9 C 17.800781 9 11.601563 9.5 8.300781 10.199219 C 6.101563 10.699219 4.199219 12.199219 3.800781 14.5 C 3.398438 17 3 20.5 3 25 C 3 29.5 3.398438 33 3.898438 35.5 C 4.300781 37.699219 6.199219 39.300781 8.398438 39.800781 C 11.898438 40.5 17.898438 41 24.5 41 C 31.101563 41 37.101563 40.5 40.601563 39.800781 C 42.800781 39.300781 44.699219 37.800781 45.101563 35.5 C 45.5 33 46 29.398438 46.101563 25 C 45.898438 20.5 45.398438 17 44.898438 14.5 Z M 19 32 L 19 18 L 31.199219 25 Z" />
+                        </svg>
+                    </a>
+                    <a href="tel:+919988739292" title="Phone Number">
+                        <svg stroke="currentColor" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                            stroke-width="0" viewBox="0 0 24 24" width="3.5vw" height="4vw">
+                            <path
+                                d="M19.077,4.928C17.191,3.041,14.683,2.001,12.011,2c-5.506,0-9.987,4.479-9.989,9.985 c-0.001,1.76,0.459,3.478,1.333,4.992L2,22l5.233-1.237c1.459,0.796,3.101,1.215,4.773,1.216h0.004 c5.505,0,9.986-4.48,9.989-9.985C22.001,9.325,20.963,6.816,19.077,4.928z M16.898,15.554c-0.208,0.583-1.227,1.145-1.685,1.186 c-0.458,0.042-0.887,0.207-2.995-0.624c-2.537-1-4.139-3.601-4.263-3.767c-0.125-0.167-1.019-1.353-1.019-2.581 S7.581,7.936,7.81,7.687c0.229-0.25,0.499-0.312,0.666-0.312c0.166,0,0.333,0,0.478,0.006c0.178,0.007,0.375,0.016,0.562,0.431 c0.222,0.494,0.707,1.728,0.769,1.853s0.104,0.271,0.021,0.437s-0.125,0.27-0.249,0.416c-0.125,0.146-0.262,0.325-0.374,0.437 c-0.125,0.124-0.255,0.26-0.11,0.509c0.146,0.25,0.646,1.067,1.388,1.728c0.954,0.85,1.757,1.113,2.007,1.239 c0.25,0.125,0.395,0.104,0.541-0.063c0.146-0.166,0.624-0.728,0.79-0.978s0.333-0.208,0.562-0.125s1.456,0.687,1.705,0.812 c0.25,0.125,0.416,0.187,0.478,0.291C17.106,14.471,17.106,14.971,16.898,15.554z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

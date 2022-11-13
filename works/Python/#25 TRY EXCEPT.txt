@@ -1,0 +1,6 @@
+a=input("Enter :");b=input("Enter :")
+try:
+    print("sum :",c:=int(a)+int(b))
+except Exception as e:
+    print(e)
+print("python jindabaad")

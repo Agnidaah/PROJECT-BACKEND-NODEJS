@@ -1,0 +1,15 @@
+class great:
+    def __init__(self):
+        print("i'm in class great")
+    def wh(self):
+        print("debug")   
+class gh(great):
+    def __init__(self):
+        print("i'm in class gh")
+        super().__init__()
+        great.__init__(self)
+    def wh(self):
+        print("debugging")
+ad=great()
+alpha=gh()
+alpha.wh()

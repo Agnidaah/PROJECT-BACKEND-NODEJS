@@ -1,0 +1,15 @@
+class dad:
+    _basketball=1#PROTECTED STARTS WITH _
+    __gym=100#PRIVATE STARTS WITH __
+class son(dad):
+    dancing=1
+    def dance(self):
+        return f"yes i dance {self.dancing} no of times"
+class grandson(son):
+    dancing=6
+    def dance(self):
+        return f"yes i dance {self.dancing} no of times"
+a=dad();b=son();c=grandson()
+print(c.dance())
+print(c._basketball)
+print(b._dad__gym)#ACCESS WITH CLASS NAME(REASON:NAME MANGLING)

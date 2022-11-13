@@ -1,0 +1,5 @@
+#LAMDBA FUNCTIONS OR ANONYMOUS FUNCTIONS 
+minus=lambda x,y:2*x-y
+def minus(x,y):
+    return x-y
+print(minus(9,4))#def have more persistance than lambda

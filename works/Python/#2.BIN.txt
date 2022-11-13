@@ -1,0 +1,6 @@
+import pickle
+a=[1,2,3,"gurpreet"]
+with open("new.bin","wb") as f:
+    pickle.dump(a,f)
+with open("new.bin","rb") as f:
+    print(pickle.load(f))

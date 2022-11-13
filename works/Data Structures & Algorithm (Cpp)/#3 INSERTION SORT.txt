@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int main(){int a[]={10,9,8,7,6,5,4,3,2,1};
+//int a[]={56,12,85,96,1,0,5,47,36,6,8};
+for(int count=1;count<(sizeof(a)/sizeof(a[0]));count++){
+    int j=1;
+    while((count-j)>=0){
+      if(a[count-j]>a[count-j+1])
+      {int temp=a[count-j];
+      a[count-j]=a[count-j+1];
+      a[count-j+1]=temp;j++;}
+      else{break;}}}
+for(int i=0;i<(sizeof(a)/sizeof(a[0]));i++){printf("%d\t",a[i]);}
+}
+/*main insertion sort
+#include<iostream>
+using namespace std;
+int main(){int a[]={10,9,8,7,6,5,4,3,2,1};
+//int a[]={56,12,85,96,1,0,5,47,36,6,8};
+for(int count=1;count<(sizeof(a)/sizeof(a[0]));count++){
+    int temp=a[count];int ptr=count-1;
+    while(temp<a[ptr] && ptr>=0){
+      a[ptr+1]=a[ptr];ptr--;}a[ptr+1]=temp;}
+for(int i=0;i<(sizeof(a)/sizeof(a[0]));i++){printf("%d\t",a[i]);}
+}
+
+*/

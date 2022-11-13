@@ -1,0 +1,3 @@
+#create a library class
+#functions:display books,lend books,add books,return books
+#create a main function and run an infinite while loop asking users for their input

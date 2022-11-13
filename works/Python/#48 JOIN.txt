@@ -1,0 +1,5 @@
+a=["f22","su57","mig 35","su 27","su 33","blackbird","su 47"]
+for b in a:
+    print(b,"and",end=" ")
+c=" , ".join(a)
+print(c," are great FJs")

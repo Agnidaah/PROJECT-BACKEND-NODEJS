@@ -1,0 +1,6 @@
+# to read and write and both
+f=open("done.txt","r+")#appending and reading both
+print(f.read())
+f.write("thank you")
+print(f.read())
+f.close()

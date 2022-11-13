@@ -1,0 +1,15 @@
+""""
+iterable- __iter__() or __getitem()
+iterator- __next__()
+iteration- 
+"""
+def gen(n):
+    for i in range(n):
+        yield i
+g=gen(400)
+print(g.__next__())
+print(g.__next__())
+d='orion pax'
+s=iter(d)
+print(s.__next__())
+print(s.__next__())

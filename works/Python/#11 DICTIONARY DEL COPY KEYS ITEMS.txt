@@ -1,0 +1,16 @@
+d1={}
+#print(type(d1))
+d2={"harry":"burger","rohan":"fish","deal":"fine",
+"shubham":{"b":"maggie","l":"roti","d":"chicken"}}
+d2["ankit"]="junk food";d2["aurangzeb"]="fight"
+d2[420]="kebabs"
+d3=d2.copy(); del d3["harry"]; print(d2);print(d2.get("harry"))
+d3=d2; del d3["harry"];print("\n",d2);d2.update({"lena":"toffee"});print(d2)
+print(d2.keys(),"\n",d2.items())
+d=("btub4",)#tupple xeperiment
+print(d);d[0]="hh"
+a=input("Enter sentence:")
+b={}
+for i,j in enumerate(a):
+    b[j]=b.get(j,0)+1
+print(b)

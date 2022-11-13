@@ -1,0 +1,21 @@
+import pydub
+import numpy as np
+from audio2numpy import open_audio
+def write(f, sr, x, normalized=True):
+    """numpy array to MP3"""
+    channels = 2 if (x.ndim == 2 and x.shape[1] == 2) else 1
+    if normalized:  # normalized array - each item should be a float in [-1, 1)
+        y = np.int16(x * 2 ** 15)
+    else:
+        y = np.int16(x)
+    song = pydub.AudioSegment(y.tobytes(),frame_rate=sr,sample_width=2,channels=channels)
+    song.export(f, format="mp3", bitrate="320k")
+fp = r"C:\Users\gurpreet singh\Desktop\JVLA - Such a Whore (Stellular Remix) [Bass Boosted]mp3.mp3"# change to the correct path to your file accordingly
+signal, sampling_rate = open_audio(fp)
+print(signal,sampling_rate)
+import pickle
+with open("new.bin","wb") as f:
+    pickle.dump(signal,f)
+with open("new.bin","rb") as f:
+    rt=pickle.load(f)
+write("name.mp3",sampling_rate,rt)

@@ -1,0 +1,4 @@
+with open("new.bin","a") as f:
+    f.write("divyanshu")
+with open("new.bin") as f:
+    print(f.read())

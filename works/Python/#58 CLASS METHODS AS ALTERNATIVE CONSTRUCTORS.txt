@@ -1,0 +1,25 @@
+class a:
+    leaves=10
+    def __init__(self,name,role,salary):#CONSTRUCTOR
+        self.name=name;self.salary=salary
+        self.role=role
+    def details(self):#SELF VERY HELPFUL
+        return f'name is {self.name} have role {self.role} with leaves{ self.leaves}'
+    @classmethod
+    def leav(cls,leave):
+        cls.leaves=leave
+    @classmethod
+    def strobj(cls,string):
+        sf=string.split('-')
+        print(type(sf))
+        return cls(sf[0],sf[1],sf[2])#OR RETURN CLS(*STRING.SPLIT('-'))
+b=a('orion','writer',56000);c=a('pax','compiler',64000)
+print(b.details())
+print(c.details())
+print(c.salary)
+a.leaves=8
+print(a.__dict__)
+a.leav(5)
+print(a.__dict__)
+d=a.strobj('star-decider-67000')
+print(d.__dict__)

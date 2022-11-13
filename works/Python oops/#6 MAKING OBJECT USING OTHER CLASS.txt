@@ -1,0 +1,11 @@
+class ak47:
+    def __init__(self,bb):
+        self.b=bb
+class scarl:
+    def __init__(self):
+        self.a=ak47(self)
+    def __del__(self):
+        print("all destroyed")
+def func():
+    scar=scarl()
+func()

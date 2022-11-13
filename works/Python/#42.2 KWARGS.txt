@@ -1,0 +1,12 @@
+#you have to always put normal arguments first ,then * and then **
+def f(a,z,*j,**io):
+    print(a,z,j)
+    for i in z:
+        print(i)
+    for key,value in io.items():
+        print(f"{key} gives value {value}")
+l="come on" 
+e = ["harry", "rohan", "lavaris", "jeevam"]#will go as list
+g=["orion","scorpio","genes"]#will go as tuple
+gh={"rohan":"manager","harry":"worker","radical":"creator"}
+f(l,e,*g,**gh)

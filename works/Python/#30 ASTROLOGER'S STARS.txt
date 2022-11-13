@@ -1,0 +1,33 @@
+#pattern printing
+#input=integer n
+#boolean =True or False
+#if true
+'''*
+   * *
+   * * *
+   * * * *'''
+#if false
+'''* * * *
+   * * * 
+   * *
+   *'''
+a=int(input("Enter number of rows:"))
+e=a
+b=int(input("Enter 0 or 1:"))
+c=bool(b)
+f=open("pattern.txt","w")
+for i in range(0,a,1):
+    d=0
+    if c==True:
+        while d<i+1:
+            f.write("*");d+=1
+    elif c==False:
+        while d<e:
+            f.write("*");d+=1
+    f.write("\n")
+    e-=1
+f.close()
+f=open("pattern.txt","r")
+g=f.read()
+print(g)
+f.close()

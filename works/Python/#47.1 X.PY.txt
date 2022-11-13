@@ -1,0 +1,8 @@
+def a(b):
+    return f"i am still using redmi note 4!{b}"
+def add(c,d):
+    return c+d+5
+print("and the name is ",__name__)
+if __name__=='__main__':
+    print(a(" so great"))
+    print(z:=add(12,6))

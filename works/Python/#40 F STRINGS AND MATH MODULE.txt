@@ -1,0 +1,11 @@
+#F strings
+import math
+a="orion"
+c=3
+d="come here %s"%a;print(d)
+b="he is the %s pax %s"%(a,c)
+print(b)
+e="lockdown is {1} for {0}";f="spreading";g="revenge"
+print(e.format(f,g))
+print(k:=f"{4*5} still he can't deny his {g} from {f}")
+print(z:=f"value of cos(65)={math.cos(65)}")

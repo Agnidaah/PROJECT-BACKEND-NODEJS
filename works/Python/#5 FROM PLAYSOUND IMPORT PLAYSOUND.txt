@@ -1,0 +1,9 @@
+from playsound  import playsound
+playsound("D:\\shabad gurbani\\aisa jog kamave jogi.mp3")
+print('''I'm dead
+I was immortal, fearless of death,
+Since you left me, Sans breath.
+Today, The sky is crying.
+In the grave of its heart, I'm dying.
+It is true than the letters of you, I read.
+Your wish is accomplished, I'm dead.''')

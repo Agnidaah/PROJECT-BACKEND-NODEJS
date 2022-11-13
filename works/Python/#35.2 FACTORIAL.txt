@@ -1,0 +1,13 @@
+a=int(input("Enter number:"))
+def factorial(a):
+    if a>0:
+        return a*factorial(a:=a-1)#can write (a-1)
+    else:
+        return 1
+print(factorial(a))
+def iterative():
+    d=1
+    for i in range(a,0,-1):
+        d*=(i)
+    return d
+print(iterative())

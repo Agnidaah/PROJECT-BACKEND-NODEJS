@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+struct node{int data;node *next;};
+class linked{node *head;public:
+linked() {head=NULL;}
+void makenode(){node *yes=new node;cout<<"Enter Element:";cin>>yes->data;
+cout<<"Enter Position:";int pos;cin>>pos;
+if (head==NULL) {head=yes;yes->next=yes;}
+else{node * temp=head;for(int i=0;(i<pos-1||pos==0) && temp->next!=head;i++){
+temp=temp->next;}yes->next=temp->next;temp->next=yes;
+if(pos==0){head=yes;}}}
+void traversal(){if(head!=NULL){node *temp=head;int i=0;
+do{cout<<temp->data << "\t"; temp=temp->next;if(temp==head){i++;}}while (i!=1 || temp!=head );}}
+void deletenode(){cout<<"Enter Position:";int inr;cin>>inr;
+if(head==NULL){cout<<"List is Empty!!!";}else{
+    node * temp=head;for(int i=0;(i<inr-1||inr==0) && temp->next!=head;i++){
+temp=temp->next;}if(inr==0 && temp==head){free(temp);head=NULL;}else{
+    node * dell=temp;dell=dell->next;temp->next=dell->next;free(dell);
+if(inr==0){head=temp->next;}
+}}}};
+int main()
+{linked list;
+x:cout << "\nEnter 1(Add) or 0(Delete) or any Num to Exit:";int no;cin>>no;
+if (no==1){list.makenode();list.traversal();goto x;}
+else if(no==0){list.deletenode();list.traversal();goto x;}
+}

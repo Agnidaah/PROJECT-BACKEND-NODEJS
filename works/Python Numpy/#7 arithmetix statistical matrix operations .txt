@@ -1,0 +1,7 @@
+import numpy as np
+a=[[1,2,3],[4,5,6],[7,8,9]]
+b=np.asarray(a)
+print(np.sum(b),np.sum(b,axis=0),np.sum(b,axis=1))#arithmetic operations
+c=b
+print(np.add(b,c),np.subtract(b,c),np.multiply(b,c),np.divide(b,c),np.dot(b,c))#matrix operations
+print(np.amin(b),np.amax(b),np.amin(b,axis=0),np.amax(b,axis=1))#statistical functions

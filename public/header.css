@@ -1,0 +1,28 @@
+*{margin:0vw;
+}
+.top{height:16vw;
+    background-color:rgb(145, 16, 145);
+}
+.top div{padding:3vw;vertical-align:center;
+}
+.icon{float:left;
+}
+.icon img{
+    height:10vw;width:10vw;
+}
+.top1{font-style:bold;
+    float:left;font-size:3.2vw;color:red;
+}
+.top2{
+    float:right;
+}
+.top2 a{
+    text-decoration:none;
+}
+.top2 a h3:hover{
+    color:yellow;
+}
+.top2 h3{padding:1vw;color:black;float:left;
+    font-size:2.5vw;
+}
+

@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+struct node{node * prev;int data;node * next;};
+class link{public:node * head;
+link(){head=NULL;}
+void makenode(){node *temp=new node();
+cout<<"Enter element:";cin>>temp->data;
+cout<<"Enter position:";int pos;cin>>pos;int i=0;
+if(head==NULL){head=temp;temp->prev=NULL;temp->next=NULL;}else{
+node * om=head;node * yes=head;for(i;i<pos && om->next!=NULL;i++){om=om->next;if(i!=0){yes=yes->next;}}
+if(pos==0){temp->next=om;om->prev=temp;temp->prev=NULL;head=temp;}
+else if(om->next==NULL && pos-i==1){om->next=temp;temp->prev=om;temp->next=NULL;}
+else{yes->next=temp;temp->prev=yes;temp->next=om;om->prev=temp;}
+}}
+void deletenode(){node * temp=head;
+cout<<"Enter position:";int pos;cin>>pos;int i=0;
+if(head==NULL){cout<<"List is Empty!Add nodes!!";}else{
+for(i;i<pos && temp->next!=NULL;i++){temp=temp->next;}
+if(pos==0){head=temp->next;if(temp->next!=NULL){(temp->next)->prev=NULL;}free(temp);}
+else if(temp->next==NULL){(temp->prev)->next=NULL;free(temp);}
+else{(temp->prev)->next=temp->next;free(temp);}
+}
+}
+void traversal(){
+node * temp=head;
+while(temp!=NULL){
+    cout<<temp->data<<"\t";temp=temp->next;
+}
+}
+};
+int main(){link list;int inr;
+x:cout<<"\nwant to add(1) or delete(0) else any other num to EXIT:";cin>>inr;
+if(inr==1){list.makenode();cout<<"Your List:";list.traversal();goto x;
+}else if(inr==0){
+    list.deletenode();cout<<"Your List:";list.traversal();goto x;
+}
+return 0;
+}

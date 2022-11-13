@@ -1,0 +1,10 @@
+class great:
+    def __init__(self):
+        print("i'm good")
+class gh(great):
+    def wh(self):
+        print("debug")
+ad=great()
+alpha=gh()
+print(isinstance(alpha,great))
+print(issubclass(gh,great))

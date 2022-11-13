@@ -1,0 +1,9 @@
+a=["orion","pax","denmark","killian"]
+i=1
+for b in a:
+    if i%2!= 0:
+        print(b)
+    i+=1
+for index,item in enumerate(a):
+    if index%2!=0:
+        print(item)

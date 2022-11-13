@@ -1,0 +1,8 @@
+#r-open file for reading
+#w-open file for writing
+#x-creates file if not exists
+#a-add content to file in end
+#t-text mode
+#b-binary mode
+#r+-read & write
+#question-to access a docstring we write print(func.__doc__)

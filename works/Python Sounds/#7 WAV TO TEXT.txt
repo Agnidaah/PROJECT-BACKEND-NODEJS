@@ -1,0 +1,33 @@
+import sounddevice as sd
+from scipy.io.wavfile import write
+import wavio as wv
+freq = 44100
+duration = 5
+recording = sd.rec(int(duration * freq),
+				samplerate=freq, channels=2)
+sd.wait()
+write("recording1.wav", freq, recording)
+wv.write("recording1.wav",recording,freq,sampwidth=2)
+filename = "recording1.wav"
+#!/usr/bin/env python3
+ 
+import speech_recognition as sr
+ 
+# obtain path to "english.wav" in the same folder as this script
+from os import path
+AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "recording1.wav")
+# AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "french.aiff")
+# AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "chinese.flac")
+ 
+# use the audio file as the audio source
+r = sr.Recognizer()
+with sr.AudioFile(AUDIO_FILE) as source:
+    audio = r.record(source)  # read the entire audio file
+ 
+# recognize speech using Sphinx
+try:
+    print("Sphinx thinks you said " + r.recognize_sphinx(audio))
+except sr.UnknownValueError:
+    print("Sphinx could not understand audio")
+except sr.RequestError as e:
+    print("Sphinx error; {0}".format(e))

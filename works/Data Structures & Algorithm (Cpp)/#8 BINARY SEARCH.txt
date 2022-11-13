@@ -1,0 +1,25 @@
+#include<iostream>
+#include<time.h>
+#include<stdlib.h>
+using namespace std;
+class yes{public:int size;
+int *arra=new int(size);
+yes(){cout<<"Enter array size:";cin>>size;}
+void arr(){
+srand(time(0));int i=0;
+while(i<size){int v2 = rand() % ((i+1)*10 + 1); if( i==0 || v2>arra[i-1]){arra[i]=v2;i++;}}}
+void traversal(){
+  for(int i=0;i<size;i++){cout<<arra[i]<<"\t";}
+}
+int bi_nary(int el){int low=0,high=size-1;int mid=(low+high)/2;
+while(low<=high){if(el==arra[mid]){return mid;}
+else if(el>arra[mid]){low=mid+1;mid=(low+high)/2;}
+else{high=mid-1;mid=(low+high)/2;}
+}return -1;
+}
+};
+int main(){yes no;
+no.arr();no.traversal();
+cout<<"Enter element to find:";int element;cin>>element;
+int pos=no.bi_nary(element);cout<<"Element found at position: "<<pos;
+return 0;}

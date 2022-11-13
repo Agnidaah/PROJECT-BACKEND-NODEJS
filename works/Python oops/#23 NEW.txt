@@ -1,0 +1,14 @@
+class _vector:
+    def __init__(self,a):
+        self.a=a
+    def __str__(self):
+        return f'vector ({self.a})'
+    def __add__(self,other):
+        z=''
+        for i,j in zip(self.a,other.a):
+            if i.isdigit() and j.isdigit():
+                z+=str(eval(i+'+'+j))+'+'
+        return z[0:len(z)-1]
+v1=_vector('1+2+3')
+v2=_vector('4+5+6')
+print(v1+v2)

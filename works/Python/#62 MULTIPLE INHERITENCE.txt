@@ -1,0 +1,25 @@
+class a:
+    no_of_games=4
+    def __init__(self,name,game,no_of_games):
+        self.name=name;self.no_of_games=no_of_games
+        self.game=game;print("a class constructor")
+    def details(self):
+        return f"{self.name} have interest in playing {self.game}"
+class b:
+    no_of_games=14
+    def __init__(self,name,game):
+        self.name=name;print("b class constructor")
+        self.game=game
+    def details(self):
+        return f"{self.name} have interest in playing {self.game}"
+c=a('harry','cricket',3)
+d=b('rohan','volleyball')
+class e(a,b):
+    pass
+f=e('kamal','tennis',5)
+g=e('raman','golf',36)
+class h(b,a):
+    pass
+i=h('gwalior','streetfight')
+print(f.no_of_games)
+print(i.no_of_games)

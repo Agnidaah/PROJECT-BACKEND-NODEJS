@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+struct node{
+int data;node * left;node *right;
+};
+class binary{public:node * head;
+binary(){head=NULL;}
+void insert(node * ptr){cout<<"\nEnter Data:";int key;cin>>key;
+node * prev=ptr;
+while(ptr!=NULL){prev=ptr;
+if(ptr->data==key){cout<<"\nElement already present!!!"<<endl;return;}
+else if(key>ptr->data){ptr=ptr->right;}else{ptr=ptr->left;}
+}
+node * p=new node;p->data=key;p->left=NULL;p->right=NULL;
+if(prev==NULL){head=p;}else{
+if(key>prev->data){prev->right=p;}else{prev->left=p;}}
+}
+void traversal(node * ptr){
+if(ptr!=NULL){traversal(ptr->left);
+cout<<"\t"<<ptr->data;traversal(ptr->right);
+}
+return;}
+};
+int main(){binary tree;
+x:cout<<"\nEnter: new node(1) | exit(2) :";int inr;cin>>inr;
+if(inr==1){tree.insert(tree.head);tree.traversal(tree.head);goto x;}
+}

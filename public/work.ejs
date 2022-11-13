@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWorks</title>
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/middle.css">
+</head>
+<body>
+    <%-include('views/header1');%>
+    <br>
+    <form method="GET" action="http://localhost:5000/work">
+      <label for="topic">Select Topic:</label><select name="topic">
+        <% for (var i =0; i <=na.length-1;  i++ ) { %>
+        <optgroup name="concept" label="<%=nam[i]%>">
+          <% for (var j =0; j <=na[i].length-1;  j++ ) { %>
+          <option><%=nam[i]%>/<%=na[i][j]%></option>
+          <% } %>
+        </optgroup>
+        <% } %>
+      </select>
+        <br><br>
+      <input type="submit" value="Get Code">
+      </form>
+</body>
+</html>

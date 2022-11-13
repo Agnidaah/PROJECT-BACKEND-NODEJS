@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+class re{public:
+void mergesort(int b[],int merg[],int size){
+  int i=0,j=0,k=0;
+  while(k<size){if(b[j]>b[j+1]){j++;int mid=b[j];k=0;
+  while(k<size){if(b[i]<b[j] || j==size){merg[k]=b[i];i++;k++;}
+else if(b[i]>b[j] || b[i]==mid){merg[k]=b[j];j++;k++;}
+else{merg[k]=b[i];i++;k++;merg[k]=b[j];j++;k++;}
+  }}else{j++;}k++;
+  }//first while
+}};
+int main(){re te;
+int b[]={0,1,10,18,22,25,2,5,10,20};
+int size=sizeof(b)/sizeof(b[0]);int merg[size];
+te.mergesort(b,merg,size);
+for(int i=0;i<(size);i++){cout<<"\n"<<merg[i];}
+return 0;}

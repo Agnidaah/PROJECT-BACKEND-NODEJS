@@ -1,0 +1,8 @@
+#INFINITE RECURSION
+def a(b):
+    return "this is"+b
+print(a(" harry"))
+def c(d):
+    c(d)
+    print("cool"+d)
+c("great")

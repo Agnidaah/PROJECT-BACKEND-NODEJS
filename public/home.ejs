@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/middle.css">
+</head>
+<body>
+    <%-include('views/header1');%>
+    <br>
+    <div class="statistics">
+    <table>
+        <% for (var i =0; i <=2;  i++ ) { %>
+        <tr>
+        <% for (var j =0; j <=2;  j++ ) { %>
+          <td><%=colls[i*3+j].name%>
+            <% rec[i*3+j].forEach((item)=>{ %>
+                <li><%=item.name%></li>
+                <% }); %>
+        </td>
+          <% } %>
+        </tr>
+        <% } %>
+      </table>
+    </div>
+</body>
+</html>

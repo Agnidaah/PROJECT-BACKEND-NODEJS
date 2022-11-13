@@ -1,0 +1,31 @@
+class employee:
+    def __init__(self,fname,lname):
+        self.fname=fname;self.lname=lname#;self.email=f"{fname}.{lname}@codewithharry.com"
+    def explain(self):
+        return f"this employee is {self.fname} {self.lname}"
+    @property
+    def email(self):
+        if self.fname==None or self.lname==None:
+            return f"email is not set.please set it using setter"
+        return f"{self.fname}.{self.lname}@codewithharry.com"
+    @email.setter
+    def email(self,string):
+        print("setting now!!")
+        names=string.split("@")[0]
+        self.fname=names.split(".")[0]
+        self.lname=names.split(".")[1]
+    @email.deleter
+    def email(self):
+        self.fname=None
+        self.lname=None
+a=employee('great','worker')
+b=employee('orion','pax')
+print(a.email)
+a.fname='simple'
+print(a.email)
+a.email="this.that@codewithharry.com"
+print(a.fname,a.lname,a.email)
+del a.email
+print(a.email)
+a.email="dino.saur@codewithharry.com"
+print(a.email)

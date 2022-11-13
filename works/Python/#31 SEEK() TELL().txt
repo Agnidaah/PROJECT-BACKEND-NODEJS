@@ -1,0 +1,10 @@
+f=open("done.txt")
+print(g:=f.tell())#tells the current character
+print(f.readline())
+print(f.tell())
+print(f.readline())
+print(f.tell())
+f.seek((g))#takes to the given character
+print(f.tell())
+print(f.readline())
+f.close()

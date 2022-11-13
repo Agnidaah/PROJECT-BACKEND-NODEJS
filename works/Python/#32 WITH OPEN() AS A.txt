@@ -1,0 +1,11 @@
+with open("done.txt") as f:#now, you don't have to write following lines:
+#f=open("done.txt","rt")#rt is default mode
+#f.close()
+    print(f.readlines())
+    print(f.readline())
+    print(f.seek(0))
+    print(f.readline())
+    a=f.read(4)
+    print(a)
+f=open("done.txt")
+print(f.readline())

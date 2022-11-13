@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int main(){//my algo
+//int a[]={10,9,8,7,6,5,4,3,2,1,0};
+int a[]={56,12,85,96,1,0,5,47,36,6,8};
+for(int count=0;count<(sizeof(a)/sizeof(a[0]));count++){
+    int key=a[count];int lock=count;
+    for(int i=(count);i<(sizeof(a)/sizeof(a[0]));i++){
+      if(key>a[i]){key=a[i];lock=i;}
+      }a[lock]=a[count];a[count]=key;
+      }
+for(int i=0;i<(sizeof(a)/sizeof(a[0]));i++){printf("%d\t",a[i]);}printf("\n");
+return 0;}
+/*actual selection sort
+#include<iostream>
+using namespace std;
+int main(){//int a[]={10,9,8,7,6,5,4,3,2,1,0};
+int a[]={56,12,85,96,1,0,5,47,36,6,8};
+for(int count=0;count<(sizeof(a)/sizeof(a[0])-1);count++){
+    int lock=count;
+    for(int i=(count+1);i<(sizeof(a)/sizeof(a[0]));i++){
+      if(a[i]<a[lock]){lock=i;}
+      }int temp=a[lock];a[lock]=a[count];a[count]=temp;
+      }
+for(int i=0;i<(sizeof(a)/sizeof(a[0]));i++){printf("%d\t",a[i]);}printf("\n");
+return 0;}
+
+*/

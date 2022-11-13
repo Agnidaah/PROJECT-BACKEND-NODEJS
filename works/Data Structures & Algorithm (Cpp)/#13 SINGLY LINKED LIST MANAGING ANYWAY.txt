@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+struct node
+{int data;
+  node *next;
+};
+class LinkedList
+{
+public:
+  node *head;
+  LinkedList()
+  {
+    head = NULL;
+  }
+  void prtl(node *head)
+  {
+    node *temp =head;
+    while (temp != NULL)
+    {cout << temp->data << "\t";
+      temp = temp->next;}
+  }
+  node * makenode(int element,int po){node *temp=new node;int count=po;int see=0;
+  temp->data=element;
+  if(head==NULL){temp->next=NULL;head=temp;return head;}else{
+  node *yes=head;node * no=yes->next;
+  while(count>1 && no->next!=NULL){yes=yes->next;no=no->next;count--;see++;}
+  if(po==0){temp->next=yes;head=temp;}
+  else if(yes->next==NULL){yes->next=temp;temp->next=NULL;}
+  else if(no->next==NULL && (see==po-2)){no->next=temp;temp->next=NULL;}
+  else{yes->next=temp;temp->next=no;}
+return head;}
+}
+  node * deletenode(int po){if(head==NULL){cout<<"List is EMPTY!";return head;}
+  else{node * temp=head;int i=po;node * yes=head;
+  while(i>0 && temp->next!=NULL){if(i!=po){yes=yes->next;}temp=temp->next;i--;}
+        if(po==0 && temp->next!=NULL){head=yes->next;free(temp);}
+        else if(temp->next==NULL){yes->next=NULL;free(temp);if(po==0){head=NULL;}}
+        else{yes->next=temp->next;free(temp);}
+  }return head;}
+
+};
+int main()
+{
+  LinkedList MyList;
+  x:cout<<"Enter element:";int ele;cin>>ele;
+    cout<<"Enter position:";int pos;cin>>pos;
+    MyList.head=MyList.makenode(ele,pos);
+    MyList.prtl(MyList.head);
+    y:cout<<"\nwant to add more..?\nEnter 1 or 0 to DELETE else any to EXIT:";int ask;cin>>ask;
+    if(ask==1){goto x;}
+    else if (ask==0){
+      cout<<"Enter position:";cin>>pos;
+      MyList.head=MyList.deletenode(pos);
+      MyList.prtl(MyList.head);goto y;
+    }
+    return 0;
+}

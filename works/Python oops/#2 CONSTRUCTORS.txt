@@ -1,0 +1,9 @@
+class gun:
+    calibre=50;name="assault"
+    def __init__(self,name,calibre):
+        self.name=name;self.calibre=calibre
+    def trigger(self):
+        print(self.name,f"rifle with calibre {self.calibre}")
+ak47=gun("ak47",.40)
+print(ak47.calibre)
+ak47.trigger()

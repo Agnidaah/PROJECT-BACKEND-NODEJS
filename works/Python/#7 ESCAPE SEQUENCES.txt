@@ -1,0 +1,10 @@
+import random #ESCAPE SEQUENCES
+print("getlost!!!!",end=" do it")
+'''comment
+not eligible''';print('come here!!!!!!!')
+print("orion pax","megatron",end="ngint")
+print("\n do it \'all\tthe\\ time")#bye
+#don't do
+print("\a")
+print("az"+"\b"+"y")
+print("COME \f ON")

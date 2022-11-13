@@ -1,0 +1,38 @@
+import random
+com=0;user=0
+def play():
+    global com;global user
+    a=["0:stone","1:paper","2:scissor"];print(a);d=[0,1,2]
+    c=random.choice(d)
+    b=int(input("Enter:"))
+    if d[b]==0 and c==1:
+        print("computer wins!");com+=1
+    elif d[b]==0 and c==2:
+        print("you wins!");user+=1
+    elif d[b]==1 and c==0:
+        print("you wins!");user+=1
+    elif d[b]==1 and c==2:
+        print("computer wins!");com+=1
+    elif d[b]==2 and c==0:
+        print("computer wins!");com+=1
+    elif d[b]==2 and c==1:
+        print("you wins!");user+=1
+    else:
+        print("TIE!!!")
+
+def ask():    
+    global com;global user
+    e=int(input("Enter play limit:"))
+    count=0
+    while count<e:
+        count+=1
+        play()
+        
+    else:
+        print(f"computer points:{com} user points:{user}");com=user=0
+        f=int(input("5 to exit and 6 to play again!"))
+        if f==5:
+            pass
+        elif f==6:
+            count=0;ask()
+ask()

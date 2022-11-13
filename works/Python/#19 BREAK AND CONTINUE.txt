@@ -1,0 +1,17 @@
+i=0
+while (True):
+    i+=1
+    if i+1<5:
+        continue
+    else:  
+     print(i+1,end=" ")
+    if(i==44):
+        break
+while (2):
+    a=int(input("Enter:"))
+    if ((type(a)==int) and a>=100 ):
+        print("Congratulations!")
+        break
+    else:
+        print("Enter a number greater than equal to 100")
+        continue

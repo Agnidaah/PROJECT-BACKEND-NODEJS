@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+struct node{node * prev;int data;node * next;};
+class link{public:node * head;
+link(){head=NULL;}
+void makenode(){node *temp=new node();
+cout<<"Enter element:";cin>>temp->data;temp->next=NULL;
+if(head==NULL){head=temp;temp->prev=NULL;}else{
+node * om=head;while(om->next!=NULL){om=om->next;
+}om->next=temp;temp->prev=om;
+}}
+void traversal(){
+node * temp=head;
+while(temp!=NULL){
+    cout<<temp->data<<"\t";temp=temp->next;
+}
+}
+};
+int main(){link list;int inr;
+x:cout<<"\nwant to add(1) or delete(0):";cin>>inr;
+if(inr==1){list.makenode();cout<<"Your List:";list.traversal();goto x;
+}else{}//deleting was to be postponed
+return 0;
+}

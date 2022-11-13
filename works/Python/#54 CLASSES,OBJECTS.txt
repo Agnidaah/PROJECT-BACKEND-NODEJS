@@ -1,0 +1,9 @@
+class student:
+    pass
+orion=student()
+megaar=student()
+orion.legacy="great"
+orion.height=78;megaar.height=90
+orion.experience=69;megaar.experience=100
+megaar.works=['intense','extensive']
+print(orion.legacy,orion.height,orion.experience,megaar.height,megaar.works)

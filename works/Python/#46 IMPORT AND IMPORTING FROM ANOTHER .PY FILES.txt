@@ -1,0 +1,14 @@
+import sklearn as a
+print(a.__version__)
+import sys
+print(sys.path)
+from sklearn.ensemble import RandomForestClassifier
+print(RandomForestClassifier())
+#now make a file named 'orion.py'
+#then run it with an attribute
+#now you can use that attribute in this file
+from orion import a
+print(a)
+import orion#imports all attributes and will remove ambuiguity
+print(orion.b)
+orion.printjoke("joke")

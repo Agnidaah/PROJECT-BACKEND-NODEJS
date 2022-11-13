@@ -1,0 +1,14 @@
+class a:#MULTIPLE INHERITENCE IS AVOIDED
+    def met(self):
+        print("this is a method from class a")
+class b(a):
+    def met(self):
+        print("this is a method from class b")
+class c(a):
+    def met(self):
+        print("this is a method from class c")
+class d(b,c):
+    def met(self):
+        print("this is a method from class d")
+e=a();f=b();g=c();h=d()
+f.met()

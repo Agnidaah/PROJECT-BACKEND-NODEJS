@@ -1,0 +1,10 @@
+class a:
+    leaves=10
+    def __init__(self,name,role):#CONSTRUCTOR
+        self.name=name
+        self.role=role
+    def details(self):#SELF VERY HELPFUL
+        return f'name is {self.name} have role {self.role}'
+b=a('orion','writer');c=a('pax','compiler')
+print(b.details())
+print(c.details())

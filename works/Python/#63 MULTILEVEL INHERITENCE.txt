@@ -1,0 +1,13 @@
+class dad:
+    basketball=1
+class son(dad):
+    dancing=1
+    def dance(self):
+        return f"yes i dance {self.dancing} no of times"
+class grandson(son):
+    dancing=6
+    def dance(self):
+        return f"yes i dance {self.dancing} no of times"
+a=dad();b=son();c=grandson()
+print(c.dance())
+print(c.basketball)

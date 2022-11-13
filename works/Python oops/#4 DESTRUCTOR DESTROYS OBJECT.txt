@@ -1,0 +1,18 @@
+class gun:
+    calibre=50;name="assault";length=60
+    def __init__(self,name,calibre):
+        self.name=name;self.calibre=calibre
+    def set_price(self,price):
+        self.price=price
+        return price
+    def trigger(self):
+        print(self.name,f"rifle with calibre {self.calibre}")
+    def __del__(self):
+        print("destructor destroyed",self.name)
+ak47=gun("ak47",.40)#print(ak47.calibre)
+ak47.trigger()
+m416=gun("m416",.30)
+m416.trigger()
+print(gun.calibre)
+print(m416.set_price(46100))
+del ak47

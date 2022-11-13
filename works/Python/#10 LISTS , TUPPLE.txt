@@ -1,0 +1,15 @@
+xiaomi=['888',"amoled","cheap",'cool'];print(xiaomi)
+print(xiaomi[0],xiaomi[3])
+num=[6449,9595,559,5,9,34,65];print(num)
+num.sort();print(num)
+num.reverse();print(num)
+print(num[0:5]);print(len(num));print(max(num));print(min(num))
+num.append(7);print(num,len(num))
+num.insert(3,67);print(num)
+num.remove(559);print(num)
+num.pop();print(num)
+print(int(xiaomi[0])*10)
+num[1]=98;print(num)
+tp=(1,2,3);print(tp)#can't change value
+a=(5,);print(a);#a[0]=4
+a=1;b=7;a,b=b,a;print("after swapping numbers are:",a,b)

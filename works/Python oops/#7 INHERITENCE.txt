@@ -1,0 +1,16 @@
+class dinosaur(object):#In Python 3.x, “class Test(object)” and “class Test” are same. 
+    def __init__(self,name):
+        self.name=name
+    def givename(self):
+        return self.name
+    def giveheight(self,height):
+        self.height=height
+        return self.height
+class jurassic(dinosaur):
+    def giveheight(self,height):#you can't put givename function over here right now
+        self.height=height
+        return self.height 
+trex=dinosaur("tyrannosaurus rex")
+print(trex.givename(),"have height ",trex.giveheight(56))
+skylo=jurassic("spinosaurus")
+print(skylo.givename(),"have height",skylo.giveheight(68))

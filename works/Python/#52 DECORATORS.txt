@@ -1,0 +1,30 @@
+'''def a():
+    print("orion")
+b=a
+del a
+b()
+def jalwa(c):
+    if c==0:
+        return print
+    if c==1:
+        return int
+e=jalwa(0)
+print(e)
+def executor(take):
+    take("great",5+7)
+executor(print)'''#JUST TALKS
+def fj(gk):
+    def zx():
+        print("zx on work")
+        gk()
+        print("gk executed")
+    return zx
+#--------------------------------------
+#@fj(MEANING PAX=FJ(PAX))###########IMPORTANT
+def pax():
+    print("great!pax")
+#or you can write
+pax=fj(pax)
+pax()
+del fj
+pax()

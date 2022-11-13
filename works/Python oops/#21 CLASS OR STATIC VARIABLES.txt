@@ -1,0 +1,14 @@
+class one:
+    a="family"
+    def __init__(self,name,role):
+        self.name=name;self.role=role
+
+first=one("gurpreet singh","student")
+print(first.name,first.role,first.a)
+second=one("gurshan singh","student")
+print(second.name,second.role,second.a)
+print(one.a)
+first.a="cse"
+print(first.a,one.a,second.a)
+one.a="sikh family"
+print(one.a,first.a,second.a)

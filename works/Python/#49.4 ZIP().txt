@@ -1,0 +1,9 @@
+a=[10,20,30,40,50,60,70,80,90]
+b=[20,30,40,50,60,70,80,90,100]
+d=[30,40,50,60,70,80,90,100,110]
+c=[]
+def mean(x):
+    return(sum(x)/len(x))
+for one,two,three in zip(a,b,d):
+    c.append(mean([one,two,three]))
+print(c)

@@ -1,0 +1,3 @@
+a=open("ORION.txt","rt")
+print(a.readline())
+print(a.readline())

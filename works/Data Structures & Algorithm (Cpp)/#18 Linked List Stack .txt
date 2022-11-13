@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+struct node{int data;struct node *prev;};
+class linked{node * top=new node;public:
+linked(){top=NULL;}
+void push(){node * ptr= new node;if(ptr==NULL){cout<<"\nstack overflow";}else{
+cout<<"\nEnter element:";cin>>ptr->data;ptr->prev=top;top=ptr;
+}
+}void pop(){if(top==NULL){cout<<"\nstack underflow";}
+else{node * ptr=top;top=ptr->prev;free(ptr);}}
+void traversal(){if(top==NULL){cout<<"\nEMPTY STACK";}
+else{node * ptr=top;cout<<"\nStack:";do{cout<<ptr->data<<"\t";ptr=ptr->prev;}while(ptr!=NULL);}
+}
+void peek(){if(top==NULL){cout<<"\nSTACK EMPTY";}
+else{cout<<"\nEnter position:";int pos;cin>>pos;node * ptr=top;cout<<"\nElement:";int i=0;
+for(i;i<pos && ptr->prev!=NULL;i++){ ptr=ptr->prev;}
+if(pos-i>=1){cout<<"doesn't exist";}else{
+cout<<ptr->data;}}}};
+int main(){linked list;
+x:cout<<"\nPUSH:(1) / POP:(0) / PEEK:(2) / EXIT:(else):-";int inr;cin>>inr;
+if(inr==1){list.push();list.traversal();goto x;}else if(inr==0){list.pop();list.traversal();goto x;}
+else if(inr==2){list.peek();list.traversal();goto x;}
+}

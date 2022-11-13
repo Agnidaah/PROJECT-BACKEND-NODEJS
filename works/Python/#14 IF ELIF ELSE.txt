@@ -1,0 +1,11 @@
+a=6;b=56;c=int(input("Enter a number:"))
+if c>b:
+      print("greater!")
+elif c==b:
+    print("Equal")      
+else:
+        print("lesser")
+z=[15,36,89]
+print(15 in z,5 in z)
+if 19 not in z:
+    print("true")  

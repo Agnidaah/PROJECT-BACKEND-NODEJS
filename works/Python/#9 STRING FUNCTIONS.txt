@@ -1,0 +1,9 @@
+a="orion pax is one";print(a[4],a[0:len(a)],a[0:100],a[0:len(a):2])
+b="books never need comments";print(b[:len(b)],b[0:],b[::])
+print(b[::3]);print(b[::-1],b[-13:-10:],b[::-2])
+c="vbuivbibvucuhiuhfiu";d=" 69169 9998"
+print(d.isalnum());print(c.isalnum(),a.isalnum(),c.isalpha(),d.isalpha(),a.isalpha())
+print(a.endswith("one"),a.endswith("pax"),a.count("o"))
+print(a.capitalize(),a.find("is"))
+print(a.lower(),a.upper())
+print(a.replace("is","will be"))

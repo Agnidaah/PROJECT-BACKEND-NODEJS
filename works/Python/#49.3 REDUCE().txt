@@ -1,0 +1,7 @@
+from functools import reduce
+a=['great','people','come','here']
+b=reduce(lambda x,y:x+' '+y,a)
+print(b)
+print(c:=reduce(lambda g,h:g*h,range(1,11)))
+# reduce(lambda x, y: x+y, [1, 2, 3, 4, 5]) calculates
+#((((1+2)+3)+4)+5)

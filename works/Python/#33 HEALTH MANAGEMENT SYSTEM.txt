@@ -1,0 +1,23 @@
+#HEALTH MANAGEMENT SYSTEM
+#3 clients-harry,rohan,and hammad
+#total 6 files 
+#write a function that when executed takes as input client name
+def getdate():
+    import datetime
+    return datetime.datetime.now()
+z=getdate()
+y={1:"harry",2:"rohan",3:"hammad"};x={4:"food",5:"exercise"};w={6:"to retrieve ",7:"to log"}
+def info():
+    print(y);a=int(input("Enter client number:"))
+    print(x);b=int(input("Enter:"))
+    print(w);c=int(input("Enter:"))
+    if c==7:
+        f=open(f"{y[a]} {x[b]}.txt","a")
+        d=input(f"Enter {x[b]}:")
+        f.write(f"\n{z}:\n\t{d}")
+        f.close()
+    elif c==6:
+        with open(f"{y[a]} {x[b]}.txt","r") as g:
+            for i in g:
+                print(i)
+info()

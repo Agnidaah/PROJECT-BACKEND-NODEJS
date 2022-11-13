@@ -1,0 +1,13 @@
+class a:
+    no_leaves=8
+b=a();c=a()
+b.name='harry';c.name='rohan'
+b.salary=56000;c.salary=34500
+b.role='writer';c.role='compiler'
+print(b.__dict__)
+print(a.no_leaves)
+print(b.no_leaves)
+b.no_leaves=7
+print(b.no_leaves)
+print(b.__dict__)
+print(a.__dict__)

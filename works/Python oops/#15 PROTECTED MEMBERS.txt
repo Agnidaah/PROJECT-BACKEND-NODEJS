@@ -1,0 +1,15 @@
+class one:
+    def __init__(self):
+        self._name="gurpreet singh"
+class two(one):
+    def __init__(self):
+        #now first call base class constructor
+        one.__init__(self)
+        self.role="prime"
+        self._me="yes"
+    def cal_pro(self):
+        print("why",self._name)
+first=one()
+second=two()
+print(second._name,"great")
+second.cal_pro()

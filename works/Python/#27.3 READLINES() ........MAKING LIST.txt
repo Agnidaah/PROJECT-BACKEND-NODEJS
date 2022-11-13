@@ -1,0 +1,2 @@
+a=open("ORION.txt","rt")
+print(a.readlines())#makes list of lines

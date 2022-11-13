@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+struct node
+{int data;
+  node *next;
+};
+class LinkedList
+{
+public:
+  node *head;
+  LinkedList()
+  {
+    head = NULL;
+  }
+  void prtl(node *head)
+  {
+    node *temp =head;
+    while (temp != NULL)
+    {cout << temp->data << "\t";
+      temp = temp->next;}
+  }
+  node * makenode(int element,int po){node *temp=new node;int count=po;int see=0;
+  temp->data=element;
+  if(head==NULL){temp->next=NULL;head=temp;return head;}else{
+  node *yes=head;node * no=yes->next;
+  while(count>1 && no->next!=NULL){yes=yes->next;no=no->next;count--;see++;}
+  if(po==0){temp->next=yes;head=temp;}
+  else if(yes->next==NULL){yes->next=temp;temp->next=NULL;}
+  else if(no->next==NULL && (see==po-2)){no->next=temp;temp->next=NULL;}
+  else{yes->next=temp;temp->next=no;}
+//yes->next=temp;
+return head;}
+}};
+int main()
+{
+  LinkedList MyList;
+  x:cout<<"Enter element:";int ele;cin>>ele;
+    cout<<"Enter position:";int pos;cin>>pos;
+    MyList.head=MyList.makenode(ele,pos);
+    MyList.prtl(MyList.head);
+    cout<<"want to add more..?\nEnter 1 else 0 to exit:";int ask;cin>>ask;
+    if(ask==1){goto x;}
+    return 0;
+}

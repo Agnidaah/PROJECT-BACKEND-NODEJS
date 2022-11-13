@@ -1,0 +1,15 @@
+#CLASSICAL METHOD:
+def a(a,b,c,d):
+    print(f"student 1:{a}\nstudent 2:{b}\nstudent 3:{c}\nstudent 4:{d}")
+a("harry","rohan","lavaris","jeevam")
+#MODERN METHOD:
+def f(y,*z):
+    print(y)
+    print(type(z))
+    print(z[0])
+    print(z)
+    for i in z:
+        print(i)
+h="good"
+e=["harry","rohan","lavaris","jeevam"]
+f(h,*e)#it will go as tuple and normal argument can only be placed before *e or it will give error

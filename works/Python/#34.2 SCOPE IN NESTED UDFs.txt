@@ -1,0 +1,21 @@
+def harry():
+    x=20;print(x)
+    def rohan():
+        global x
+        x=88
+    print(x)
+    rohan()
+    print(x)
+harry()
+print(x)
+x=59
+def harry():
+    x=20;print(x)
+    def rohan():
+        global x
+        x=88
+    print(x)
+    rohan()
+    print(x)
+harry()
+print(x)

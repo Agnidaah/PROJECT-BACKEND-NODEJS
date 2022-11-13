@@ -1,0 +1,15 @@
+class A:
+    def __init__(self,n):
+        self.name = n
+class B(A):
+    def __init__(self, roll):
+        self.roll = roll
+class C(B,A):
+    def __init__(self,rank,name,roll):
+        self.rank=rank
+        A.__init__(self,name)
+        B.__init__(self,roll)
+    def record(self):
+        print (self.name,self.rank,self.roll)
+object = C("CEO","praveen","backend")
+object.record()

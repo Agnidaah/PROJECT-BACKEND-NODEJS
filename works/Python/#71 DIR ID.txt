@@ -1,0 +1,2 @@
+a='orion pax is great';import inspect
+print(id(a),'\n',dir(a),inspect.getmembers(a))

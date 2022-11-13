@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+struct node{
+int data;node * left;node *right;
+};
+class binary{public:node * head;
+binary(){head=NULL;}
+node * makenode(int inr){
+node * first=new node;first->data=inr;if(head==NULL){head=first;}
+first->left=NULL;
+first->right=NULL;
+return first;}
+void preorder(node * ptr){
+cout<<ptr->data<<"\t";
+if(ptr->left!=NULL){preorder(ptr->left);}
+if(ptr->right!=NULL){preorder(ptr->right);}
+}
+void inorder(node * ptr){if(ptr->left!=NULL){inorder(ptr->left);}
+cout<<ptr->data<<"\t";
+if(ptr->right!=NULL){inorder(ptr->right);}
+}
+void postorder(node * ptr){if(ptr->left!=NULL){postorder(ptr->left);}
+if(ptr->right!=NULL){postorder(ptr->right);}
+cout<<ptr->data<<"\t";
+}};
+int main(){binary tree;
+node * one=tree.makenode(6);
+node * two=tree.makenode(5);
+node * three=tree.makenode(7);
+node * four=tree.makenode(4);
+node * five=tree.makenode(8);
+node * six=tree.makenode(3);
+node * seven=tree.makenode(10);
+one->left=two;
+one->right=three;
+three->left=four;
+three->right=five;
+two->left=six;
+two->right=seven;
+cout<<"Preorder Traversal:";
+tree.preorder(tree.head);
+cout<<"\nInorder Traversal:";
+tree.inorder(tree.head);
+cout<<"\nPostorder Traversal:";
+tree.postorder(tree.head);
+}

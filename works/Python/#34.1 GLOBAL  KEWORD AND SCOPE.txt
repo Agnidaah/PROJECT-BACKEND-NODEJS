@@ -1,0 +1,13 @@
+l=10
+def b():
+    l=9
+    print(l)
+def a(n):
+    m=8#l+=5 you can't change value of l but following can help
+    global l;l+=45#it will change value of l globally
+    print(f"value of l in function is {l}")
+    print(n,"i hve printed")
+b()
+a(5)
+a("that's great")
+print(f"value of l outside fucntion is {l}")

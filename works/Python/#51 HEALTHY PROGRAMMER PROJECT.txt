@@ -1,0 +1,72 @@
+import os;import datetime
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
+import pygame;import time;import winsound;import operator
+a=[[],[],[]];d=["drink water","exercise eyes","workout"];q={};r=['waters','eyes','workouts']
+def beep():
+    for i in range(0,5,1):
+        time.sleep(0.2)
+        winsound.Beep(500,200)#IT CONSUMES 2 SECONDS
+def control():
+    pygame.mixer.music.set_volume(0.7)
+    pygame.mixer.music.play()
+    while True:
+        print("Press 'p' to pause, 'r' to resume")
+        print("Press 'e' to stop the music")
+        query = input("  ")
+        if query == 'p':
+            pygame.mixer.music.pause()     
+        elif query == 'r':
+            pygame.mixer.music.unpause()
+        elif query == 'e':
+            pygame.mixer.music.stop()
+            break
+def settime():#STEP 1
+    global a;global q
+    for i in range(0,3):
+        print(f"set reminder to {d[i]} between 9-5:")
+        while True:
+            g=input("Enter dayhour in format 'hhmmss' with limits from (00:00:00) to (23:59:59):")
+            a[i].append(g);q.update({int(g):r[i]})
+            h=input("Enter 1 to set more reminder or any key to set for next:")
+            if h=='1':
+                pass
+            else:
+                break
+l=[];m=[]
+def sort():#STEP 2
+    global l;global m;global q
+    from functools import reduce
+    k=reduce(lambda x,y: x+y,a)
+    k=list(map(int,k))
+    l=k.sort();l=list(map(str,k))
+    for i in range(0,len(l)):
+        z=datetime.datetime.strptime(l[i],"%H%M%S")
+        m.append(z)
+    print(m)
+    newdict= dict(sorted(q.items(), key=operator.itemgetter(0)))
+    print(newdict)
+initial= datetime.datetime(1900,1,1,9,0,0)
+def routine():
+    global initial;global m
+    from time import sleep
+    for i in range(0,len(m)):
+        nlk='000000'
+        o=(m[i]-initial).total_seconds()
+        sleep(o)
+        delta=do(q[int(l[i])]);xyz=datetime.datetime.strptime(nlk,"%H%M%S")
+        gep=(m[i]-xyz).total_seconds()
+        pes=gep+delta
+        ty_res = time.gmtime(pes)
+        res = time.strftime("%H%M%S",ty_res)
+        zodiac=datetime.datetime.strptime(res,"%H%M%S")
+        initial=zodiac
+def do(string):
+    beep()
+    time1=time.time()
+    pygame.mixer.init()
+    pygame.mixer.music.load(f"{string}.mp3")
+    control()
+    return (time.time()-time1+2)
+settime()
+sort()
+routine()

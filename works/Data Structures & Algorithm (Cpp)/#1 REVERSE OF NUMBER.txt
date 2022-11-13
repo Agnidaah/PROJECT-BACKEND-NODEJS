@@ -1,0 +1,52 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+struct node {
+    int data;
+    node* next;
+};
+class LinkedList {
+  private:
+    node* head;
+  public:
+    LinkedList(){
+      head = NULL;
+    }
+    void reverse(int q){
+  int count=0,nt=(q);while(true && nt>10){(nt)=(nt)/10;count++;
+}
+int my=(nt)*(pow(10,count));(q)=(q)-my;//cout<<(nt)<<endl;
+push_back(nt,q);
+}
+    void push_back(int newElement,int df) {
+      node* newNode = new node();//cout<<newElement<<endl;
+      newNode->data = newElement;
+      newNode->next = NULL; 
+      if(head == NULL){
+        head = newNode;
+      } else {
+        node* temp = head;
+        while(temp->next != NULL)
+          temp = temp->next;
+        temp->next = newNode;
+      }  if(df!=0){reverse(df);}else{}  
+    } 
+    int PrintList() {int rev=0,cont=0;
+      node* temp = head;
+      if(temp != NULL) {
+        //cout<<"The list contains: ";
+        while(temp != NULL) {cont++;
+          rev+=temp->data*pow(10,cont-1);//cout<<temp->data<<" ";
+          temp = temp->next;
+        }
+        //cout<<endl;
+      } else {
+        //cout<<"The list is empty.\n";
+      }return rev;
+    }  
+};
+int main()
+{LinkedList MyList;
+int r;cout<<"Enter num :";cin>>r;MyList.reverse(r);
+cout<<"num reversed:"<<MyList.PrintList();
+return 0;}

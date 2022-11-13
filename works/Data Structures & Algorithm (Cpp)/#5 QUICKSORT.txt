@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class re{public:
+void quicksort(int a[],int low,int high){
+  if(low<high){
+int point=partition(a,low,high);
+quicksort(a,low,point-1);
+quicksort(a,point+1,high);}
+}
+int partition(int a[],int low,int high){
+int pivot=a[low];
+int i = low + 1;
+    int j = high;
+  do
+  {while(a[i]<=pivot){i++;}
+  while(a[j]>pivot){j--;}
+  if(i<j){int temp=a[i];a[i]=a[j];a[j]=temp;}
+  }while(i<j);
+  int temp=a[low];a[low]=a[j];a[j]=temp;
+       return j;                              }
+      };
+int main(){re te;
+int a[]={10,9,8,7,6,5,4,3,2,1,0};
+//int a[]={56,12,85,96,1,0,5,47,36,6,8};
+te.quicksort(a,0,(sizeof(a)/sizeof(a[0])-1));
+for(int i=0;i<(sizeof(a)/sizeof(a[0]));i++){printf("%d\t",a[i]);}printf("\n");
+return 0;}

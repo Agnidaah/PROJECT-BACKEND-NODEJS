@@ -1,0 +1,9 @@
+var=36.7
+var1="hello world";print(5*var1)
+var2=4
+var3="\nkahe ka world"
+print(var1,var2,var,type(var),type(var1),type(var2),var+var2,var1+var3,end="\nkhatam\n")
+var4="56";var5="544";print((int(var4)+int(var5))*5)
+print(5*int("5"))
+print(100*"*"+"*\n","Enter your digit number:\n")
+inpnum=input();k=input();print("you entered:"+str(int(inpnum)+int(k)))

@@ -1,6 +1,6 @@
 const{MongoClient}=require('mongodb');
 //const MongoClient=require('mongodb').MongoClient;
-const urli='mongodb://localhost:27017';
+const urli='mongodb://127.0.0.1:27017';
 const database='stats';
 const client=new MongoClient(urli);
 //-------------------------------------------------------------
@@ -13,13 +13,13 @@ const path=require('path');
 app.set('view engine','ejs');
 app.use(express.static(__dirname+'/public'));
 let fol=path.join(__dirname,'public');
-app.get(`/home`,async  (req,res)=>{
+app.get(`/home`,async (req,res)=>{
 let result=await client.connect();
     let dbi=result.db(database);
     var colls=await dbi.listCollections().toArray();var rec=[];
     for(var i=0;i<colls.length;i++){
         let collection=dbi.collection(colls[i].name);let response=await collection.find({}).toArray();
-        while(i!=0 && rec[i-1]==undefined){console.log("hello");}
+        //while(i!=0 && rec[i-1]==undefined){console.log("hello");}
           rec.push(response);
           if(rec[colls.length-1]!=undefined){res.render(`${fol}/home.ejs`,{colls,rec});}
     }
@@ -35,7 +35,6 @@ let result=await client.connect();
                         {var d=[];const dirpath=path.join(__dirname,`${fol}/${file}`);
                         fs.readdirSync(dirpath).forEach(item => {
                             d.push(item);});
-                            
                         }na.push(d);
                       });
         }

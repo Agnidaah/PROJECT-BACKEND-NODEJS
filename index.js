@@ -1,6 +1,6 @@
 const{MongoClient}=require('mongodb');
 //const MongoClient=require('mongodb').MongoClient;
-const urli='mongodb://127.0.0.1:27017';
+const urli='mongodb+srv://gurpreetsinghf22:0HeLmklCbKztvz4Y@cluster0.g3xlq3o.mongodb.net/?retryWrites=true&w=majority';
 const database='stats';
 const client=new MongoClient(urli);
 //-------------------------------------------------------------
@@ -45,7 +45,7 @@ let result=await client.connect();
         if(req.query.topic!=undefined){
             try { co = fs.readFileSync(`works/${req.query.topic}`, "utf8"); }
             catch (err) { console.log(err); }
-            open("http://localhost:5000/code");}
+            open("https://orionpax.onrender.com/code");}
         });
         app.get(`/code`,(_,res)=>{
             res.render(`${fol}/code.ejs`,{co});
